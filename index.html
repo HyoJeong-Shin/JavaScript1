@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="itzy"></p>
+    <!-- js코드는 body태그 가장 아래에 넣는 것이 오류가 가장 덜 남 (스크립트 언어 : 위에서부터 한 줄씩 읽어옴)-->
+    <script>
+      /*
+        //
+        window.alert("얍!");
+        let str = document.getElementById("itzy");
+        str.innerHTML = "blah blah 참말많아 난괜찮아";
+        document.write('당장 출력하슈');
+        console.log('당장 출력해!!!!');
+        
+
+       
+       let realNum = 7; //숫자 할당
+       const strNum = '7'; //문자열 할당
+       strNum = 8; //const로 선언한 strNum값을 바꿔보면, 오류가 남 
+        let noName; // undefined타입
+        let str = null;
+        
+
+       // 템플릿 리터럴
+       let MYNAME = '신효정';
+       let MYCITY = '서울';
+
+       console.log('내 이름은 '+ MYNAME + '입니다. 내가 사는 곳은 '+ MYCITY + '입니다.');
+
+       console.log(`내 이름은 ${MYNAME}입니다. 내가 사는 곳은 ${MYCITY}입니다.`);
+        
+
+        // 산술 연산자
+       let fNum = 3;
+       let sNum = 5;
+       console.log(`${fNum} + ${sNum} = `+(fNum+sNum));
+       console.log(`${fNum} - ${sNum} = `+(fNum-sNum));
+       console.log(`${fNum} * ${sNum} = `+(fNum*sNum));
+       console.log(`${fNum} / ${sNum} = `+(fNum/sNum));
+       console.log(`${fNum} % ${sNum} = `+(fNum%sNum));
+       
+
+       // 비교 연산자
+       console.log('777' == 777); //true 값이 같고 타입은 달라도 됨
+       console.log('777' === 777); //false 타입과 값 모두 같아야 함
+       
+
+       // 대입 연산자
+       let num = 10;
+       num += 5;
+       let likelion = 'Hi';
+        likelion += ", I'm a baby lion";
+        console.log(likelion);
+        
+       
+        // typeof 연산자
+        const name = "Hyojeong";
+        const birthday = 0119;
+        const isStudent = true;
+
+        console.log(typeof name);
+        console.log(typeof birthday);
+        console.log(typeof isStudent);
+        
+
+       // 조건문 - if문
+        if(true){
+            console.log('이 메시지가 출력될 거예요');
+        }
+
+        let theday = '수요일';
+        if(theday==='수요일'){
+            console.log('멋사가 기다려');
+        } else if(theday==='토요일' || '일요일'){
+            console.log('즐거운 주말');
+        } else{
+            console.log('수요일이 올 때까지 기다려');
+        }
+        
+
+        if (false){
+            console.log('얘는 출력되지 않지만');
+        }else {
+            console.log('이 코드는 출력될 거예요');
+        }
+
+        let i = 3;
+        if (i===0){
+            console.log('i는 0입니다');
+        } else if(i>0){
+            console.log('i는 0보다 큽니다');
+        } else{
+            console.log('i는 0보다 작습니다');
+        }
+        
+
+        // 조건문 - switch문
+        let fruit = 'apple';
+        switch (fruit){
+            case 'apple':
+                console.log('사과');
+                break;
+            case 'banana':
+                console.log('바나나');
+                break;
+            default:
+                console.log('다른 과일');
+                break;
+        }
+
+        let theday = '일요일';
+        switch (theday){
+            case '수요일':
+                console.log('멋사가 기다려');
+                break;
+            case '토요일':
+            case '일요일':  // 두 개의 값이 같은 결과 반환할 때
+                console.log('즐거운 주말');
+                break;
+            default:
+                console.log('수요일이 올 때까지 기다려');
+                break;
+        }
+        
+
+        // 반복문 - while 문
+        for (let i = 0; i < 4; i++){
+            console.log(i);
+        }
+
+        for (let i = 5; i > 0; i--){
+            console.log(i);
+        }
+        
+
+        // 반복문 - while 문
+        for (let i = 0; i < 4; i++){
+            console.log(i);
+        }
+
+        console.log('위는 for문 아래는 while문');
+
+        let j = 0;
+        while (j < 4){
+            console.log(j);
+            j++;
+        }
+        
+
+        // 조건문 - do while문
+        // 무조건 한 번 실행하고 표현식을 검사하므로 출력이 됨
+        const fStr = '출력!';
+        const sStr = '안 출력!';
+
+        do {
+            console.log(fStr)
+        } while (fStr === sStr);
+        
+
+        //배열
+        const likelion = ['덕성여대', '멋쟁이', '사자처럼', 8, '기', true]
+        console.log(likelion[3]);
+        console.log(likelion[10]); // 없는 값에 접근하면 undefined 뜸
+        
+        likelion[1] = '아기';   // const로 선언된 배열 안의 요소 변경 가능
+        console.log(likelion);
+        
+        console.log(likelion.length); // 배열의 길이
+        
+        likelion.push('사자','신효정'); // 배열 요소 추가
+        console.log(likelion);
+
+        console.log(likelion.pop());    // 마지막 요소 제거하고 제거한 요소 반환
+        console.log(likelion);
+
+        let likelionLen = likelion.length;
+        for(likelionLen; likelionLen>0; likelionLen--){
+            console.log(likelion.pop());
+        }
+        
+
+        let likelionLen = likelion.length;
+        for(let i=0; i < likelionLen; i++){
+            console.log(likelion.pop());
+        }
+        
+
+        // 함수
+        function addNumber(x,y){
+            console.log(x+y);
+        }
+        addNumber(2,3);
+
+        let fNum = 100;
+        let sNum = 200;
+        addNumber(fNum, sNum);
+
+        function addNumber(x,y){
+            let sum = x + y;
+            return sum;
+        }
+
+        // 함수표현식1
+        function addNumber(x,y){
+            return x + y;
+        }
+        // 더 많이 쓰는 함수 표현식2
+        const addNumber = function(x,y){
+            return x + y;
+        }
+    
+        const ifLikelion = function(day){
+            if (day === '수요일'){
+                return true;
+            } else{
+                return false;
+            }
+            
+        }
+
+        ifLikelion('수요일');
+
+        const addNumber = function(x,y){
+            return x + y;
+        }
+
+        // 화살표 함수
+        const addNumber = (x,y) => {
+            return x + y;
+        }
+        const addNumber = (x,y) => x + y;   // return 값이 한 줄일 때 생략 가능
+        const addNumber = x => x + 1; // 파라미터가 1개일때는 괄호 생략 가능
+
+        // 삼항 연산자 문법을 사용한 화살표 함수 
+        const ifLikelion = day => day === '수요일' ? true : false ;
+
+        // 유효 범위 - 지역 변수
+        const addNumber = (x,y) => {
+            let sum = x + y;
+            console.log(sum);
+        }
+
+        addNumber(2,3);
+        console.log(sum);   // sum은 함수가 끝나면 사라지는 지역변수이기 때문에 error
+
+        // 유효 범위 - 전역 변수
+        let num = 10;
+        const globalNumber = () => {
+            console.log(num);
+            num = 20;
+        }
+        globalNumber();     //10
+        console.log(num);   //20
+
+        // 지역 변수와 전역 변수 같은 이름으로 선언 -> 지역 변수만으로 호출 가능
+        let num = 10;
+        const globalNumber = () => {
+            let num = 20;
+            console.log(num);
+        }
+        globalNumber();     //20
+        console.log(num);   //10
+        
+       // 배열의 메소드 .forEach() -> 인자로 함수를 받음
+        const arr = [0,1,2,3,4,5,6,7,8,9,10];
+
+        arr.forEach(function(element){
+            console.log(element);
+        });
+        // 혹은 arrow 함수 가능
+        arr.forEach(element => console.log(element));
+
+        // .map() -> return 값으로 새로운 배열을 반환함
+        const arr = [0,1,2,3];
+
+        let squareArr = arr.map(function(element){
+            return element * 2;
+        });
+        // 혹은 arrow 함수 사용 가능
+        doubleArr = arr.map(element => element * 2);
+        console.log(doubleArr);
+
+        // 제곱한 값이 되도록 .map() 메소드 짜기
+        const arr = [0,1,2,3,4,5];
+        doubleArr = arr.map(element => element * element);  // element **2 도 사용 가능
+        console.log(doubleArr);
+*/
+    </script>
+</body>
+</html>
